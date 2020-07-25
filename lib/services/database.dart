@@ -15,10 +15,6 @@ class DataService {
     userRef.set({
       'uid': user.uid, 
       'email': user.email,
-      'user': user
     });
   }  
-
-  
-
 }
