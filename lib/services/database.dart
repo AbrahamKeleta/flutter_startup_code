@@ -9,8 +9,6 @@ class DataService {
   final String uid;
   DataService({this.uid});
   final database = FirebaseDatabase.instance;
-  // final _controller = StreamController<List<User>>.broadcast();
-  // get controllerIn => _controller;
 
   Future<Void> saveUser(user) {
     final userRef = database.reference().child('users').child(uid);
