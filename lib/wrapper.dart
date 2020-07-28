@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_basics/models/user.dart';
 import 'package:flutter_basics/screens/authentication/authentication.dart';
 import 'package:flutter_basics/screens/home/home.dart';
-import 'package:flutter_basics/screens/home/home.dart';
 import 'package:flutter_basics/screens/home/user_data.dart';
 import 'package:provider/provider.dart';
+
+import 'screens/home/home.dart';
 
 class Wrapper extends StatelessWidget {
   @override

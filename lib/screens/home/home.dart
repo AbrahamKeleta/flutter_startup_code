@@ -3,6 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_basics/screens/authentication/login.dart';
 import 'package:flutter_basics/screens/authentication/register.dart';
 import 'package:flutter_basics/screens/home/user_data.dart';
+import 'package:flutter_basics/services/auth.dart';
 
 class Home extends StatefulWidget {
   Home({Key key}) : super(key: key);
@@ -24,6 +25,15 @@ class HomeState extends State<Home> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Beer App'),
+        actions: <Widget>[
+          FlatButton.icon(
+            icon: Icon(Icons.person),
+            label: Text('Register'),
+            onPressed: () async {
+              await Auth().signOut();
+            },
+          ),
+        ],
       ),
       body: Center(
         child: widgetOptions.elementAt(selectedIndex),
